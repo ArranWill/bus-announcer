@@ -47,5 +47,20 @@
   <div id="bottom">
     <img id="action" src=".\play-fill.svg" alt="start">
   </div>
+  <script>
+    let is_play = true;
+    const ACTION = document.getElementById("action"), BOTTOM = document.getElementById("bottom"), STOP = document.getElementById("stop");
+    ACTION.addEventListener("click", ()=> {
+      if (is_play) {
+        ACTION.setAttribute("src", ".\\volume-up-fill.svg");
+        BOTTOM.style.backgroundColor = "aliceblue";
+      }
+      else {
+        ACTION.setAttribute("src", ".\\play-fill.svg");
+        BOTTOM.style.backgroundColor = "honeydew";
+      }
+      is_play = !is_play;
+    });
+  </script>
 </body>
 </html>
